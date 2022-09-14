@@ -1,0 +1,38 @@
+﻿@page
+@model Frontend.Pages.CArbitro.IndexModel
+@{
+    ViewData["Title"]="Index Arbitro";
+}
+
+<h1>Listado de Arbitros</h1>
+    <p>
+        <a asp-page= "CreaArbi" class="btn btn-outline-info"> Crear Arbitro</a>
+    </p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Documento</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Modalidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var a in Model.Arbitros)
+            {
+                <tr>
+                    <td>@a.Documento</td>
+                    <td>@a.Nombres</td>
+                    <td>@a.Apellidos</td>
+                    <td>@a.Modalidad</td>
+                    <td>
+                        <a asp-page="./Edit" class="btn btn-outline-dark" asp-route-id="@a.Id">Edit</a>
+                        <a asp-page="./Details" class="btn btn-outline-secondary" asp-route-id="@a.Id">Details</a>
+                        <a asp-page="./Delete" class="btn btn-outline-danger" asp-route-id="@a.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>

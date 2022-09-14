@@ -1,0 +1,65 @@
+﻿@page
+@model Frontend.Pages.CArbitro.DetailsModel
+@{
+    ViewData["Title"]="Detalles del Arbitro";
+}
+
+<h2>Detalles de Arbitro</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Arbitro.Documento" class="control-label"></label>
+                    <input asp-for="Arbitro.Documento" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Nombres" class="control-label"></label>
+                    <input asp-for="Arbitro.Nombres" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Apellidos" class="control-label"></label>
+                    <input asp-for="Arbitro.Apellidos" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Modalidad" class="control-label"></label>
+                    <input asp-for="Arbitro.Modalidad" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.RH" class="control-label"></label>
+                    <input asp-for="Arbitro.RH" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Celular" class="control-label"></label>
+                    <input asp-for="Arbitro.Celular" class="form-control" readonly/>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Colegio.RazonSocial" class="control-label">Colegio</label>
+                    <input asp-for="Colegio.RazonSocial" class="form-control" readonly/>
+                    
+                </div>
+               
+
+                <div class="form-group">
+                    <a asp-page="Index" class="btn btn-outline-secondary">Regresar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
