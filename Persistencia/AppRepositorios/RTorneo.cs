@@ -32,6 +32,8 @@ namespace Persistencia
                 {
                     creado=false;
                 }
+
+                
             }
             return creado;
         }
@@ -46,7 +48,7 @@ namespace Persistencia
             var tor=_appContext.Torneos.Find(torneo.Id);
             if(tor != null)
             {
-                //bool ex= exist(pat);
+                //bool ex= exist(tor);
                 //if(!ex)
                 {
                     try
@@ -112,6 +114,17 @@ namespace Persistencia
                 ex=true;
             }
             return ex;
+        }
+
+        private bool date(Torneo fecha)
+        {
+            bool da= false;
+            Torneo fec= _appContext.Torneos.FirstOrDefault(t=> t.FechaInicio >= fecha.FechaFin);
+            if(fec !=null)
+            {
+                da=true;
+            }
+            return da;
         }
     }
 }

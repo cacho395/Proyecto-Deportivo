@@ -4,27 +4,27 @@ using Dominio;
 
 namespace Persistencia
 {
-    public class RColegio:IRColegio //: operador de herencia entre clases
+    public class REscenario:IREscenario //: operador de herencia entre clases
     {
         //atributos
         private readonly AppContext _appContext;
 
         //Metodos
         //Constructor por defecto
-        public RColegio(AppContext appContext)
+        public REscenario(AppContext appContext)
         {
             this._appContext=appContext;
         }
 
-        public bool CrearColegio(Colegio col)
+        public bool CrearEscenario(Escenario esc)
         {
             bool creado=false;
-            bool ex= exist(col);
+            bool ex= exist(esc);
             if(!ex)
             {
                 try
                 {
-                    this._appContext.Colegios.Add(col);
+                    this._appContext.Escenarios.Add(esc);
                     this._appContext.SaveChanges();
                     creado=true;
                 }
@@ -35,17 +35,17 @@ namespace Persistencia
             }
             return creado;
         }
-        public Colegio BuscarColegio(int id)
+        public Escenario BuscarEscenario(int id)
         {
-            Colegio colegio=  _appContext.Colegios.Find(id);
+            Escenario escenario=  _appContext.Escenarios.Find(id);
 
-            return colegio;
+            return escenario;
         }
 
-        public bool ActualizarColegio(Colegio col)
+        public bool ActualizarEscenario(Escenario esc)
         {
             bool actualizado=false;
-            var c=_appContext.Colegios.Find(col.Id);
+            var c=_appContext.Escenarios.Find(esc.Id);
             if(c != null)
             {
                 //bool ex= exist(col);
@@ -53,12 +53,10 @@ namespace Persistencia
                 {
                     try
                     {
-                        c.Nit=col.Nit;
-                        c.RazonSocial=col.RazonSocial;
-                        c.Direccion=col.Direccion;
-                        c.Telefono= col.Telefono;
-                        c.Modalidad= col.Modalidad;
-                        c.Licencia= col.Licencia;
+                        c.Nombre=esc.Nombre;
+                        c.Espectadores=esc.Espectadores;
+                        c.Tipo=esc.Tipo;
+                        c.UnidadDeportivaId= esc.UnidadDeportivaId;
                         _appContext.SaveChanges();
                         actualizado= true;
                     }
@@ -72,15 +70,15 @@ namespace Persistencia
 
             return actualizado;
         }
-        public bool EliminarColegio(int id)
+        public bool EliminarEscenario(int id)
         {
             bool eliminado= false;
-            var col= this._appContext.Colegios.Find(id);
-            if(col !=null)
+            var esc= this._appContext.Escenarios.Find(id);
+            if(esc !=null)
             {
                 try
                 {
-                    this._appContext.Colegios.Remove(col);
+                    this._appContext.Escenarios.Remove(esc);
                     this._appContext.SaveChanges();
                     eliminado=true;
                 }
@@ -94,16 +92,16 @@ namespace Persistencia
             return eliminado;
         }
         
-        public IEnumerable<Colegio> ListarColegios()
+        public IEnumerable<Escenario> ListarEscenarios()
         {
-            return this._appContext.Colegios;
+            return this._appContext.Escenarios;
         }
 
-        private bool exist(Colegio colegio)
+        private bool exist(Escenario escenario)
         {
             bool ex= false;
-            Colegio col= _appContext.Colegios.FirstOrDefault(c=> c.Nit == colegio.Nit);
-            if(col !=null)
+            Escenario esc= _appContext.Escenarios.FirstOrDefault(e=> e.Nombre == escenario.Nombre);
+            if(esc !=null)
             {
                 ex=true;
             }

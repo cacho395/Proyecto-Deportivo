@@ -31,6 +31,14 @@ namespace Persistencia
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TorneoEquipo>().HasKey(x=>new {x.TorneoId,x.EquipoId});
+
+            //Marcar un campo como unico
+            modelBuilder.Entity<Torneo>().HasIndex(t => t.Nombre).IsUnique();
+            modelBuilder.Entity<Colegio>().HasIndex(c =>c.Nit).IsUnique();
+            modelBuilder.Entity<Entrenador>().HasIndex(e => e.Documento).IsUnique();
+            modelBuilder.Entity<Equipo>().HasIndex(eq => eq.Nombre).IsUnique();
+            modelBuilder.Entity<Patrocinador>().HasIndex(p => p.Documento).IsUnique();
+            modelBuilder.Entity<Arbitro>().HasIndex(a => a.Documento).IsUnique();
         }
     }
 }

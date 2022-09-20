@@ -4,24 +4,24 @@ using Dominio;
 
 namespace Persistencia
 {
-    public class REntrenador:IREntrenador //: operador de herencia entre clases
+    public class REquipo:IREquipo //: operador de herencia entre clases
     {
         //atributos
         private readonly AppContext _appContext;
 
         //Metodos
         //Constructor por defecto
-        public REntrenador(AppContext appContext)
+        public REquipo(AppContext appContext)
         {
             this._appContext=appContext;
         }
 
-        public bool CrearEntrenador(Entrenador ent)
+        public bool CrearEquipo(Equipo equ)
         {
             bool creado=false;
             try
             {
-                this._appContext.Entrenadores.Add(ent);
+                this._appContext.Equipos.Add(equ);
                 this._appContext.SaveChanges();
                 creado=true;
             }
@@ -29,29 +29,26 @@ namespace Persistencia
             {
                 creado=false;
             }
-            
             return creado;
         }
-        public Entrenador BuscarEntrenador(int id)
+        public Equipo BuscarEquipo(int id)
         {
-            return _appContext.Entrenadores.Find(id);
-        }
+            Equipo equipo=  _appContext.Equipos.Find(id);
 
-        public bool ActualizarEntrenador(Entrenador ent)
+            return equipo;
+        }
+        public bool ActualizarEquipo(Equipo equ)
         {
             bool actualizado=false;
-            var en=_appContext.Entrenadores.Find(ent.Id);
-            if(en != null)
-            {
-                try
+            var eq=_appContext.Equipos.Find(equ.Id);
+            if(eq != null)
+            { 
+                    try
                 {
-                    en.Documento=ent.Documento;
-                    en.Nombres=ent.Nombres;
-                    en.Apellidos=ent.Apellidos;
-                    en.Modalidad= ent.Modalidad;
-                    en.Celular= ent.Celular;
-                    en.Correo= ent.Correo;
-                    en.EquipoId=ent.EquipoId;
+                    eq.Nombre=equ.Nombre;
+                    eq.Modalidades=equ.Modalidades;
+                    eq.Jugadores= equ.Jugadores;
+                    eq.PatrocinadorId=equ.PatrocinadorId;
                     _appContext.SaveChanges();
                     actualizado= true;
                 }
@@ -59,20 +56,21 @@ namespace Persistencia
                 {
                     
                     actualizado=false;
-                }     
+                }    
+                
             }
 
             return actualizado;
         }
-        public bool EliminarEntrenador(int id)
+        public bool EliminarEquipo(int id)
         {
             bool eliminado= false;
-            var ent= this._appContext.Entrenadores.Find(id);
-            if(ent !=null)
+            var eq= this._appContext.Equipos.Find(id);
+            if(eq !=null)
             {
                 try
                 {
-                    this._appContext.Entrenadores.Remove(ent);
+                    this._appContext.Equipos.Remove(eq);
                     this._appContext.SaveChanges();
                     eliminado=true;
                 }
@@ -85,13 +83,14 @@ namespace Persistencia
 
             return eliminado;
         }
-        public List<Entrenador> ListarEntrenadores1()
+        public List<Equipo> ListarEquipos1()
         {
-            return this._appContext.Entrenadores.ToList();
+            return this._appContext.Equipos.ToList();
         }
-        public IEnumerable<Entrenador> ListarEntrenadores()
+        public IEnumerable<Equipo> ListarEquipos()
         {
-            return this._appContext.Entrenadores;
+            return this._appContext.Equipos;
         }
+
     }
 }

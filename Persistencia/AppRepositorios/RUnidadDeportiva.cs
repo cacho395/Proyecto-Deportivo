@@ -4,27 +4,27 @@ using Dominio;
 
 namespace Persistencia
 {
-    public class RPatrocinador:IRPatrocinador //: operador de herencia entre clases
+    public class RUnidadDeportiva:IRUnidadDeportiva //: operador de herencia entre clases
     {
         //atributos
         private readonly AppContext _appContext;
 
         //Metodos
         //Constructor por defecto
-        public RPatrocinador(AppContext appContext)
+        public RUnidadDeportiva(AppContext appContext)
         {
             this._appContext=appContext;
         }
 
-        public bool CrearPatrocinador(Patrocinador pat)
+        public bool CrearUnidadDeportiva(UnidadDeportiva und)
         {
             bool creado=false;
-            bool ex= exist(pat);
+            bool ex= exist(und);
             if(!ex)
             {
                 try
                 {
-                    this._appContext.Patrocinadores.Add(pat);
+                    this._appContext.UnidadDeportivas.Add(und);
                     this._appContext.SaveChanges();
                     creado=true;
                 }
@@ -35,41 +35,32 @@ namespace Persistencia
             }
             return creado;
         }
-        public Patrocinador BuscarPatrocinador(int id)
+        public UnidadDeportiva BuscarUnidadDeportiva(int id)
         {
-            Patrocinador patrocinador=  _appContext.Patrocinadores.Find(id);
+            UnidadDeportiva unidadDeportiva=  _appContext.UnidadDeportivas.Find(id);
 
-            return patrocinador;
+            return unidadDeportiva;
         }
 
-        public Patrocinador BuscarPatrocinadorD(string doc)
-        {
-            Patrocinador patrocinador=  _appContext.Patrocinadores.FirstOrDefault(p=> p.Documento== doc);
-
-            return patrocinador;
-        }
-        public bool ActualizarPatrocinador(Patrocinador pat)
+        public bool ActualizarUnidadDeportiva(UnidadDeportiva und)
         {
             bool actualizado=false;
-            var patro=_appContext.Patrocinadores.Find(pat.Id);
-            if(patro != null)
+            var ud=_appContext.UnidadDeportivas.Find(und.Id);
+            if(ud != null)
             {
-                //bool ex= exist(pat);
+                //bool ex= exist(col);
                 //if(!ex)
                 {
                     try
                     {
-                        patro.Documento=pat.Documento;
-                        patro.Nombre=pat.Nombre;
-                        patro.Tipo=pat.Tipo;
-                        patro.Direccion= pat.Direccion;
-                        patro.Telefono= pat.Telefono;
+                        ud.Nombre=und.Nombre;
+                        ud.Direccion=und.Direccion;
+                        ud.TorneoId=und.TorneoId;
                         _appContext.SaveChanges();
                         actualizado= true;
                     }
                     catch (System.Exception)
                     {
-                        
                         actualizado=false;
                     }
                 }
@@ -78,15 +69,15 @@ namespace Persistencia
 
             return actualizado;
         }
-        public bool EliminarPatrocinador(int id)
+        public bool EliminarUnidadDeportiva(int id)
         {
             bool eliminado= false;
-            var pat= this._appContext.Patrocinadores.Find(id);
-            if(pat !=null)
+            var esc= this._appContext.UnidadDeportivas.Find(id);
+            if(esc !=null)
             {
                 try
                 {
-                    this._appContext.Patrocinadores.Remove(pat);
+                    this._appContext.UnidadDeportivas.Remove(esc);
                     this._appContext.SaveChanges();
                     eliminado=true;
                 }
@@ -99,20 +90,22 @@ namespace Persistencia
 
             return eliminado;
         }
-        public List<Patrocinador> ListarPatrocinadores1()
+
+        public List<UnidadDeportiva> ListarUnidadDeportivas1()
         {
-            return this._appContext.Patrocinadores.ToList();
+            return this._appContext.UnidadDeportivas.ToList();
         }
-        public IEnumerable<Patrocinador> ListarPatrocinadores()
+        
+        public IEnumerable<UnidadDeportiva> ListarUnidadDeportivas()
         {
-            return this._appContext.Patrocinadores;
+            return this._appContext.UnidadDeportivas;
         }
 
-        private bool exist(Patrocinador patrocinador)
+        private bool exist(UnidadDeportiva und)
         {
             bool ex= false;
-            Patrocinador pat= _appContext.Patrocinadores.FirstOrDefault(p=> p.Documento == patrocinador.Documento);
-            if(pat !=null)
+            UnidadDeportiva un= _appContext.UnidadDeportivas.FirstOrDefault(ud=> ud.Nombre == und.Nombre);
+            if(un !=null)
             {
                 ex=true;
             }
