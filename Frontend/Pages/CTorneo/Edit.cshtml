@@ -1,0 +1,80 @@
+﻿@page
+@model Frontend.Pages.CTorneo.EditModel
+@{
+    ViewData["Title"]="Editar Torneo";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Torneo.Id"/>
+                              
+                <div class="form-group">
+                    <label asp-for="Torneo.Nombre" class="control-label"></label>
+                    <input asp-for="Torneo.Nombre" class="form-control"/>
+                    <span asp-validation-for="Torneo.Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Categoria" class="control-label"></label>
+                    <input asp-for="Torneo.Categoria" class="form-control"/>
+                    <span asp-validation-for="Torneo.Categoria" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Modalidad" class="control-label"></label>
+                    <input asp-for="Torneo.Modalidad" class="form-control"/>
+                    <span asp-validation-for="Torneo.Modalidad" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaInicio" class="control-label"></label>
+                    <input asp-for="Torneo.FechaInicio" class="form-control"/>
+                    <span asp-validation-for="Torneo.FechaInicio" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.FechaFin" class="control-label"></label>
+                    <input asp-for="Torneo.FechaFin" class="form-control"/>
+                    <span asp-validation-for="Torneo.FechaFin" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Equipo" class="control-label"></label>
+                    <input asp-for="Torneo.Equipo" class="form-control"/>
+                    <span asp-validation-for="Torneo.Equipo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Fixture" class="control-label"></label>
+                    <input asp-for="Torneo.Fixture" class="form-control"/>
+                    <span asp-validation-for="Torneo.Fixture" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.MunicipioId" class="control-label">Municipio</label>
+                    <select asp-for="Torneo.MunicipioId" class="form-control">
+                        <option value="">--Seleccionar Municipio--</option>
+                        @foreach (var mun in Model.Municipios)
+                        {
+                            <option value="@mun.Id">@mun.Nombre</option>
+                        }
+                        
+                    </select>
+                    <span asp-validation-for="Torneo.MunicipioId" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-outline-info"/>
+                    <a asp-page="Index" class="btn btn-outline-secondary" >Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

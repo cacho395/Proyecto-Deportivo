@@ -1,0 +1,74 @@
+﻿@page
+@model Frontend.Pages.CArbitro.EditModel
+@{
+    ViewData["Title"]="Editar Arbitro";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Arbitro.Id" class="form-control" />
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Documento" class="control-label"></label>
+                    <input asp-for="Arbitro.Documento" class="form-control" readonly/>
+                    <span asp-validation-for="Arbitro.Documento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Nombres" class="control-label"></label>
+                    <input asp-for="Arbitro.Nombres" class="form-control"/>
+                    <span asp-validation-for="Arbitro.Nombres" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Apellidos" class="control-label"></label>
+                    <input asp-for="Arbitro.Apellidos" class="form-control"/>
+                    <span asp-validation-for="Arbitro.Apellidos" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Modalidad" class="control-label"></label>
+                    <input asp-for="Arbitro.Modalidad" class="form-control"/>
+                    <span asp-validation-for="Arbitro.Modalidad" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.RH" class="control-label"></label>
+                    <input asp-for="Arbitro.RH" class="form-control"/>
+                    <span asp-validation-for="Arbitro.RH" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.Celular" class="control-label"></label>
+                    <input asp-for="Arbitro.Celular" class="form-control"/>
+                    <span asp-validation-for="Arbitro.Celular" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.ColegioId" class="control-label">Colegio</label>
+                    <select asp-for="Arbitro.ColegioId" class="form-control">
+                        <option value="">--Seleccionar Colegio--</option>
+                        @foreach (var col in Model.Colegios)
+                        {
+                            <option value="@col.Id">@col.RazonSocial</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Arbitro.ColegioId" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-outline-info"/>
+                    <a asp-page="Index" class="btn btn-outline-secondary" >Cancelar</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+

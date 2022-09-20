@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Frontend</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Frontend.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <style>
+        .fondo{
+            background: url('https://www.nebrija.com/medios/residenciasnebrija/wp-content/uploads/sites/12/2019/09/Deportes.jpg') #fff;
+            height: 500px; 
+        }
+    </style>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Torneo Deportivo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item border border-white">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CMunicipio/Index">Municipios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CPatrocinador/Index">Patrocinadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CArbitro/Index">Arbitros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CEntrenador/Index">Entrenadores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CEquipo/Index">Equipos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CTorneo/Index">Torneos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CColegio/Index">Colegios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CEscenario/Index">Escenarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="ms-1 btn btn-md btn-outline-info" asp-area="" asp-page="/CUnidadDeportiva/Index">Unidades Deportivas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

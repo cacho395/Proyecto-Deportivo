@@ -1,0 +1,51 @@
+﻿@page
+@model Frontend.Pages.CEquipo.EditModel
+@{
+    ViewData["Title"]="Editar Equipo";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Equipo.Id" class="form-control" />
+
+                <div class="form-group">
+                    <label asp-for="Equipo.Nombre" class="control-label"></label>
+                    <input asp-for="Equipo.Nombre" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Equipo.Modalidades" class="control-label"></label>
+                    <input asp-for="Equipo.Modalidades" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Equipo.Jugadores" class="control-label"></label>
+                    <input asp-for="Equipo.Jugadores" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Equipo.PatrocinadorId" class="control-label">Patrocinador</label>
+                    <select asp-for="Equipo.PatrocinadorId" class="form-control">
+                        <option value="">--Seleccionar Patrocinador--</option>
+                        @foreach (var pat in Model.Patrocinadores)
+                        {
+                            <option value="@pat.Id">@pat.Nombre</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Equipo.PatrocinadorId" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-outline-info"/>
+                    <a asp-page="Index" class="btn btn-outline-secondary" >Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@page
+@model Frontend.Pages.CMunicipio.EditModel
+@{
+    ViewData["Tittle"]= "Editar Municipio";
+}
+
+<h2>Editar Municipio</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation.summary="ModelOnly" class="text-danger"></div>
+                <label asp-for="Municipio.Id" class="control-label"></label>
+                <input asp-for="Municipio.Id" class="form-control" readonly/>
+                <br>
+                <div class="form-group">
+                    <label asp-for="Municipio.Nombre" class="control-label"></label>
+                    <input asp-for="Municipio.Nombre" class="form.control"/>
+                    <span asp-validation-for="Municipio.Nombre" class="text-danger"></span>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="submit" value="Editar" class="btn btn-outline-info"/>
+                    <a asp-page="Index" class="btn btn-outline-secondary" >Cancelar</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
