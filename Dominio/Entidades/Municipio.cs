@@ -6,31 +6,6 @@ namespace Dominio
 {
     public class Municipio
     {
-        /*
-        //atributos
-        private int Id;
-        private string Nombre;
-
-        //Metodos
-        public Municipio()
-        {}
-        public void setId(int id)
-        {
-            this.Id=id;
-        }
-        public int getId()
-        {
-            return this.Id;
-        }
-        public void setNombre(string Nombre)
-        {
-            this.Nombre=nombre;
-        }
-        public string getNombre()
-        {
-            return this.Nombre;
-        }
-        */
         
         // propiedades
 

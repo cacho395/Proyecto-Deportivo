@@ -120,11 +120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\dominio\\Dominio.csproj",
+      "projectPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Dominio\\Dominio.csproj",
       "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\dominio\\obj\\",
+      "outputPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -172,7 +172,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,11 +12,15 @@ namespace Dominio
         [MaxLength(20,ErrorMessage="{0} debe tener max {1} caracteres")]
         [MinLength(3, ErrorMessage= "{0} debe tenet min {1} caracteres")]
         public string Nombre{get;set;}
-        //public List<Modalidades> Modalidades {get;set;}
+
+        [Required(ErrorMessage="Modalidades es obligatorio")]
+        [MaxLength(30,ErrorMessage="{0} debe tener max {1} caracteres")]
+        [MinLength(3, ErrorMessage= "{0} debe tenet min {1} caracteres")]
+        public string Modalidades {get;set;}
         
 
         //propiedad navigacional para la relacion con entrenador
-        [Required(ErrorMessage="Entrenador es obligatorio")]
+        //[Required(ErrorMessage="Entrenador es obligatorio")]
         public Entrenador Tecnico {get;set;}
        
         [Required(ErrorMessage="Jugadores es obligatorio")]
