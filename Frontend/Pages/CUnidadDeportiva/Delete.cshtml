@@ -1,0 +1,48 @@
+﻿@page
+@model Frontend.Pages.CUnidadDeportiva.DeleteModel
+@{
+    ViewData["Title"]="Eliminar Unidad Deportiva";
+}
+
+<h2>Eliminando Unidad Deportiva</h2>
+@if(ViewData["Error"]==null)
+{
+    <h3 class="text-danger">Desea eliminar esta Unidad Deportiva?</h3>
+}
+else
+{
+    <h3 class="text-danger">@ViewData["Error"]</h3>
+
+}
+
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation.summary= "ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="UnidadDeportiva.Id" />
+
+                <div class="form-group">
+                    <label asp-for="UnidadDeportiva.Nombre" class="control-label"></label>
+                    <input asp-for="UnidadDeportiva.Nombre" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UnidadDeportiva.Direccion" class="control-label"></label>
+                    <input asp-for="UnidadDeportiva.Direccion"class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Torneo.Nombre" class="control-label">Torneo</label>
+                    <input asp-for="Torneo.Nombre" class="form-control" readonly>
+                </div>
+                <br>
+                  <div class="form-group">
+                    <input type="submit" value="Eliminar" class= "ms-3 btn btn-outline-info"/>
+                    <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

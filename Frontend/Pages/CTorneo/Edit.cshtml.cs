@@ -22,8 +22,17 @@ namespace Frontend.Pages.CTorneo
         public ActionResult OnGet(int id)
         {
             Torneo= _repoTorneo.BuscarTorneo(id);
-            Municipios=_repoMunicipio.ListarMunicipio();
-            return Page();
+            if(Torneo!=null)
+            {
+                Municipios=_repoMunicipio.ListarMunicipio();
+                return Page();
+            }
+            else
+            {
+                Municipios=_repoMunicipio.ListarMunicipio();
+                ViewData["Error"]="Torneo no encontrado";
+                return Page();
+            }
 
         }
 
@@ -36,7 +45,8 @@ namespace Frontend.Pages.CTorneo
             }
             else
             {
-                ViewData["Error"]="No es posible Editar este registro";
+                Municipios=_repoMunicipio.ListarMunicipio();
+                ViewData["Error"]= "Ya existe un Torneo con el Nombre: " + Torneo.Nombre;
                 return Page();
             }
         }

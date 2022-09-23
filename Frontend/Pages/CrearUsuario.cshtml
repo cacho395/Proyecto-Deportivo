@@ -1,0 +1,41 @@
+﻿@page
+@model Frontend.Pages.CrearUsuarioModel
+@{
+    Layout="/Pages/Shared/_LayoutInicio.cshtml";
+}
+
+<h2 style=color:Blue>Crear Usuario</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+                <style>
+                    .form-control{
+                        background-color: #def;
+                    }
+                </style>
+                <div class="form-group">
+                    <label asp-for="Login.Usuario" class="control-label"></label>
+                    <input asp-for="Login.Usuario" class="form-control"/>
+                    <span asp-validation-for="Login.Usuario" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Login.Password" class="control-label"></label>
+                    <input asp-for="Login.Password" class="form-control"/>
+                    <span asp-validation-for="Login.Password" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Crear" class= "btn btn-outline-info"/>
+                    <a asp-page="IniciaSesion" class="btn btn-outline-secondary">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

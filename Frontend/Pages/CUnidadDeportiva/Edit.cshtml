@@ -1,10 +1,10 @@
 ﻿@page
-@model Frontend.Pages.CUnidadDeportiva.CreateModel
+@model Frontend.Pages.CUnidadDeportiva.EditModel
 @{
-    ViewData["Title"]="Crear Unidad Deportiva";
+    ViewData["Title"]="Editar Unidad Deportiva";
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2>Editando la Unidad Deportiva</h2>
 <h3 class="text-danger">@ViewData["Error"]</h3>
 
 <div class="form-horizontal">
@@ -40,7 +40,7 @@
                 </div>
                 <br>
                   <div class="form-group">
-                    <input type="submit" value="Crear" class= "ms-3 btn btn-outline-info"/>
+                    <input type="submit" value="Editar" class= "ms-3 btn btn-outline-info"/>
                     <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
                 </div>
 
@@ -48,3 +48,4 @@
         </div>
     </div>
 </div>
+

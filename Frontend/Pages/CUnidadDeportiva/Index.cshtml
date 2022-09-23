@@ -14,15 +14,17 @@
             <tr>
                 <th>Nombre</th>
                 <th>Direccion</th>
+                <th>Torneo</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var ud in Model.UnidadDeportivas)
+            @foreach (var ud in Model.UnidadV)
             {
                 <tr>
                     <td>@ud.Nombre</td>
                     <td>@ud.Direccion</td>
+                    <td>@ud.Torneo</td>
                     <td>
                         <a asp-page="./Edit" class="btn btn-outline-dark" asp-route-id="@ud.Id">Edit</a>
                         <a asp-page="./Details" class="btn btn-outline-secondary" asp-route-id="@ud.Id">Details</a>
