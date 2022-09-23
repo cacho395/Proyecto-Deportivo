@@ -55,6 +55,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0NvbGVnaW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CDeportista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CDeportista/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CDeportista/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CDeportista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CDeportista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0RlcG9ydGlzdGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CEntrenador/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VudHJlbmFkb3JcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -95,8 +115,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VzY2VuYXJpb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CEscenario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VzY2VuYXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CEscenario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VzY2VuYXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CEscenario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VzY2VuYXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CEscenario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0VzY2VuYXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CInscribirEq/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0luc2NyaWJpckVxXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CInscribirEq/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0luc2NyaWJpckVxXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CInscribirEq/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ0luc2NyaWJpckVxXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CMunicipio/CrearMun.cshtml]
@@ -139,6 +183,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1BhdHJvY2luYWRvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CrearUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXJVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CTorneo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1Rvcm5lb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -163,6 +211,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VuaWRhZERlcG9ydGl2YVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CUnidadDeportiva/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VuaWRhZERlcG9ydGl2YVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CUnidadDeportiva/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VuaWRhZERlcG9ydGl2YVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CUnidadDeportiva/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VuaWRhZERlcG9ydGl2YVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/CUnidadDeportiva/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ1VuaWRhZERlcG9ydGl2YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -175,8 +235,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/IniciaSesion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lhU2VzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/Inicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5pY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/Shared/_LayoutInicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXRJbmljaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/John/Documents/Ucaldas/Ciclo3/eventos/Aplicacion/Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
