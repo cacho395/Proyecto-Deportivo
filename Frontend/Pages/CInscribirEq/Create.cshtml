@@ -1,0 +1,52 @@
+﻿@page
+@model Frontend.Pages.CInscribirEq.CreateModel
+@{
+    ViewData["Title"]= "Inscribir Equipo en Torneo";
+}
+
+<h2>Inscripciones</h2>
+<h3 class="text-danger">@ViewData["Error"]</h3>
+
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="TorneoEquipo.TorneoId" class="control-label"></label>
+                    <select asp-for="TorneoEquipo.TorneoId" class="form-control"> 
+                        <option value="">--Seleccionar Torneo--</option>
+                        @foreach (var tor in Model.Torneos)
+                        {
+                            <option value="@tor.Id">@tor.Nombre</option>
+                            
+                        }
+                    </select>
+                    <span asp-validation-for="TorneoEquipo.TorneoId"class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label asp-for="TorneoEquipo.EquipoId" class="control-label"></label>
+                    <select asp-for="TorneoEquipo.EquipoId" class="form-control"> 
+                        <option value="">--Seleccionar Equipo--</option>
+                        @foreach (var eq in Model.Equipos)
+                        {
+                            <option value="@eq.Id">@eq.Nombre</option>
+                            
+                        }
+                    </select>
+                    <span asp-validation-for="TorneoEquipo.EquipoId"class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Inscribir" class= "ms-3 btn btn-outline-info"/>
+                    <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+

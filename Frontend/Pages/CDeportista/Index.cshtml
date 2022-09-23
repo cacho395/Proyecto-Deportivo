@@ -1,0 +1,40 @@
+﻿@page
+@model Frontend.Pages.CDeportista.IndexModel
+@{
+    ViewData["Titlw"]="Index del Deportista";
+}
+
+<h1>Listado de Deportistas</h1>
+    <p>
+        <a asp-page= "Create" class="btn btn-outline-info"> Crear Deportista</a>
+    </p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Genero</th>
+                <th>Modalidad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in Model.Deportistas)
+            {
+                <tr>
+                    <td>@d.Nombres</td>
+                    <td>@d.Apellidos</td>
+                    <td>@d.Genero</td>
+                    <td>@d.Modalidad</td>
+                    <td>
+                        <a asp-page="./Edit" class="btn btn-outline-dark" asp-route-id="@d.Id">Edit</a>
+                        <a asp-page="./Details" class="btn btn-outline-secondary" asp-route-id="@d.Id">Details</a>
+                        <a asp-page="./Delete" class="btn btn-outline-danger" asp-route-id="@d.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+

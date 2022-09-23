@@ -5,8 +5,15 @@
 }
 
 <h2>Ingresar Entrenador</h2>
-<h3 class="text-danger">Esta Seguro de Eliminar este Entrenador?</h3>
-<h3 class="text-danger">@ViewData["Error"]</h3>
+@if(ViewData["Error"]==null)
+{
+    <h3 class="text-danger">Desea eliminar este Entrenador?</h3>
+}
+else
+{
+    <h3 class="text-danger">@ViewData["Error"]</h3>
+
+}
 
 <div class="form-horizontal">
     <hr /> 
@@ -52,8 +59,8 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="submit" value="Eliminar" class="btn btn-outline-danger"/>
-                    <a asp-page="Index" class="btn btn-outline-secondary">Cancelar</a>
+                    <input type="submit" value="Eliminar" class="ms-3 btn btn-outline-danger"/>
+                    <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
                 </div>
 
             </form>

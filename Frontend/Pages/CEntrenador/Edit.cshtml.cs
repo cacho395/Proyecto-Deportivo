@@ -27,8 +27,18 @@ namespace Frontend.Pages.CEntrenador
         public ActionResult OnGet(int id)
         {
             Entrenador=_repoEntrenador.BuscarEntrenador(id);
-            Equipos=_repoEquipo.ListarEquipos();
-            return Page();
+            if(Entrenador!=null)
+            {
+                Equipos=_repoEquipo.ListarEquipos();
+                return Page();
+            }
+            else
+            {
+                Equipos=_repoEquipo.ListarEquipos();
+                ViewData["Error"]="Entrenador no encontrado";
+                return Page(); 
+            }
+            
         }
 
         public ActionResult OnPost()
@@ -40,7 +50,8 @@ namespace Frontend.Pages.CEntrenador
             }
             else
             {
-                ViewData["Error"]= "Este Entrenador ya se encuentra creado";
+                Equipos=_repoEquipo.ListarEquipos();
+                ViewData["Error"]= "Ya existe un Entrenador con el Documento: " + Entrenador.Documento;
                 return Page();
             }
         }

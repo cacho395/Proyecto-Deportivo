@@ -1,0 +1,32 @@
+﻿@page
+@model Frontend.Pages.CInscribirEq.IndexModel
+@{
+    ViewData["Title"]="Inscribir Torneo en Equipo";
+}
+<h1>Inscripción de Equipos en Torneos</h1>
+    <p>
+        <a asp-page= "Create" class="btn btn-outline-info"> Inscripción</a>
+    </p>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Torneo</th>
+                <th>Equipo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var teq in Model.TorneoEquiposV)
+            {
+                <tr>
+                    <td>@teq.Torneo</td>
+                    <td>@teq.Equipo</td>
+                    <td>
+                        <a asp-page="./Delete" class="ms-3 btn btn-outline-danger" asp-route-idT="@teq.TorneoId" asp-route-idE="@teq.EquipoId">Delete</a>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>

@@ -17,7 +17,7 @@
 
                 <div class="form-group">
                     <label asp-for="Arbitro.Documento" class="control-label"></label>
-                    <input asp-for="Arbitro.Documento" class="form-control" readonly/>
+                    <input asp-for="Arbitro.Documento" class="form-control"/>
                     <span asp-validation-for="Arbitro.Documento" class="text-danger"></span>
                 </div>
 
@@ -62,10 +62,22 @@
                     </select>
                     <span asp-validation-for="Arbitro.ColegioId" class="text-danger"></span>
                 </div>
+
+                <div class="form-group">
+                    <label asp-for="Arbitro.TorneoId" class="control-label">Torneo</label>
+                    <select asp-for="Arbitro.TorneoId" class="form-control">
+                        <option value="">--Seleccionar Torneo--</option>
+                        @foreach (var tor in Model.Torneos)
+                        {
+                            <option value="@tor.Id">@tor.Nombre</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Arbitro.TorneoId" class="text-danger"></span>
+                </div>
                 <br>
                 <div class="form-group">
-                    <input type="submit" value="Editar" class="btn btn-outline-info"/>
-                    <a asp-page="Index" class="btn btn-outline-secondary" >Cancelar</a>
+                    <input type="submit" value="Editar" class="ms-3 btn btn-outline-info"/>
+                    <a asp-page="Index" class="ms-3 btn btn-outline-secondary" >Cancelar</a>
 
             </form>
         </div>

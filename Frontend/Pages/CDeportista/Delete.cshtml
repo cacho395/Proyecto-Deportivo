@@ -1,0 +1,84 @@
+﻿@page
+@model Frontend.Pages.CDeportista.DeleteModel
+@{
+    ViewData["Title"]= "Eliminar Deportista";
+}
+
+<h2>Eliminando Deportista</h2>
+@if(ViewData["Error"]==null)
+{
+    <h3 class="text-danger">Desea eliminar este Deportista?</h3>
+}
+else
+{
+    <h3 class="text-danger">@ViewData["Error"]</h3>
+
+}
+<div class="form-horizontal">
+    <hr /> 
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary= "ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Deportista.Id"/>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Documento" class="control-label"></label>
+                    <input asp-for="Deportista.Documento" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Nombres" class="control-label"></label>
+                    <input asp-for="Deportista.Nombres" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Apellidos" class="control-label"></label>
+                    <input asp-for="Deportista.Apellidos" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Genero" class="control-label"></label>
+                    <input asp-for="Deportista.Genero" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Modalidad" class="control-label"></label>
+                    <input asp-for="Deportista.Modalidad" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.FechaNacimiento" class="control-label"></label>
+                    <input asp-for="Deportista.FechaNacimiento" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Rh" class="control-label"></label>
+                    <input asp-for="Deportista.Rh" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.EPS" class="control-label"></label>
+                    <input asp-for="Deportista.EPS" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Deportista.Celular" class="control-label"></label>
+                    <input asp-for="Deportista.Celular" class="form-control" readonly/>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Equipo.Nombre" class="control-label">Equipo</label>
+                    <input asp-for="Equipo.Nombre" class="form-control" readonly/>
+                </div>
+
+                <br>
+               <div class="form-group">
+                    <input type="submit" value="Eliminar" class="ms-3 btn btn-outline-danger"/>
+                    <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

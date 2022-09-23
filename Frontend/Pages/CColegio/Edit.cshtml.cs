@@ -38,7 +38,7 @@ namespace Frontend.Pages.CColegio
             }
             else
             {
-                ViewData["Error"]="No es posible actualizar este registro";
+                ViewData["Error"]= "Ya existe un Colegio con el Nit: " + Colegio.Nit;
                 return Page();
             }
         }

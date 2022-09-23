@@ -1,12 +1,19 @@
 ﻿@page
-@model Frontend.Pages.CEscenario.CreateModel
+@model Frontend.Pages.CEscenario.DeleteModel
 @{
-    ViewData["Title"]="Crear Escenario";
+    ViewData["Title"]="Eliminar Escenario";
 }
 
 <h2>@ViewData["Title"]</h2>
-<h3 class="text-danger">@ViewData["Error"]</h3>
+@if(ViewData["Error"]==null)
+{
+    <h3 class="text-danger">Desea eliminar este Escenario?</h3>
+}
+else
+{
+    <h3 class="text-danger">@ViewData["Error"]</h3>
 
+}
 <div class="form-horizontal">
     <hr /> 
     <div class="row">
@@ -17,36 +24,28 @@
 
                 <div class="form-group">
                     <label asp-for="Escenario.Nombre" class="control-label"></label>
-                    <input asp-for="Escenario.Nombre" class="form-control"/>
+                    <input asp-for="Escenario.Nombre" class="form-control" readonly/>
                     <span asp-validation-for="Escenario.Nombre" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Escenario.Espectadores" class="control-label"></label>
-                    <input asp-for="Escenario.Espectadores" class="form-control"/>
+                    <input asp-for="Escenario.Espectadores" class="form-control" readonly/>
                     <span asp-validation-for="Escenario.Espectadores" class="text-danger"></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="Escenario.Tipo" class="control-label"></label>
-                    <input asp-for="Escenario.Tipo" class="form-control"/>
-                    <span asp-validation-for="Escenario.Tipo" class="text-danger"></span>
+                    <input asp-for="Escenario.Tipo" class="form-control" readonly/>
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="Escenario.UnidadDeportivaId" class="control-label">Unidad Deportiva</label>
-                    <select asp-for="Escenario.UnidadDeportivaId" class="form-control">
-                        <option value="">--Seleccionar UDeportiva--</option>
-                        @foreach (var und in Model.UnidadDeportivas)
-                        {
-                            <option value="@und.Id">@und.Nombre</option>
-                        }
-                    </select>
-                    <span asp-validation-for="Escenario.UnidadDeportivaId" class="text-danger"></span>
+                    <label asp-for="UnidadDeportiva.Nombre" class="control-label">Unidad Deportiva</label>
+                    <input asp-for="UnidadDeportiva.Nombre" class="form-control" readonly/>
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="submit" value="Crear" class= "ms-3 btn btn-outline-info"/>
+                    <input type="submit" value="Eliminar" class= "ms-3 btn btn-outline-info"/>
                     <a asp-page="Index" class="ms-3 btn btn-outline-secondary">Cancelar</a>
                 </div>
 

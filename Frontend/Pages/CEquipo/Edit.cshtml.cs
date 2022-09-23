@@ -25,10 +25,19 @@ namespace Frontend.Pages.CEquipo
         public ActionResult OnGet(int id)
         {
             Equipo=_repoEquipo.BuscarEquipo(id);
-            Patrocinadores=_repoPat.ListarPatrocinadores();
-            return Page();
-        }
+            if(Equipo!=null)
+            {
+                Patrocinadores=_repoPat.ListarPatrocinadores();
+                return Page();
 
+            }
+            else
+            {
+                Patrocinadores=_repoPat.ListarPatrocinadores();
+                ViewData["Error"]="Patrocinador no encontrado";
+                return Page(); 
+            }
+        }
         public ActionResult OnPost()
         {
             bool funciono= _repoEquipo.ActualizarEquipo(Equipo);
@@ -38,7 +47,8 @@ namespace Frontend.Pages.CEquipo
             }
             else
             {
-                ViewData["Error"]= "Ya existe un Equipo con el Nombre" + Equipo.Nombre;
+                Patrocinadores=_repoPat.ListarPatrocinadores();
+                ViewData["Error"]= "Ya existe un Equipo con el Nombre: " + Equipo.Nombre;
                 return Page();
             }
         }
