@@ -21,6 +21,9 @@ public class Startup {
         services.AddScoped<IRTorneo,RTorneo>();
         services.AddScoped<IREscenario,REscenario>();
         services.AddScoped<IRUnidadDeportiva,RUnidadDeportiva>();
+        services.AddScoped<IRTorneoEquipo,RTorneoEquipo>();
+        services.AddScoped<IRDeportista,RDeportista>();
+        services.AddScoped<IRLogin,RLogin>();
     }
     public void Configure(WebApplication app, IWebHostEnvironment env) {
         if (!app.Environment.IsDevelopment()) {
