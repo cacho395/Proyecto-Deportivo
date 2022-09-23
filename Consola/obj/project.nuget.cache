@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pgo/4606MQw5CkPoRke18u+zPUi0ewJ144Nk7LGVQMO5Ab2ysnr+IgK28bG7lAj3HFS7mKf5RFA4vL8aCJZjJg==",
+  "dgSpecHash": "/Jpd2LkMGVtZF8CvZpa2NawHNW5wrcuLIYVlftJWrDZfQ6EjSGJyhAEFyf3E5igbwpKZ9fY7Qw0LoUcbymrAlA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\Consola.csproj",
+  "projectFilePath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\John\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\John\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

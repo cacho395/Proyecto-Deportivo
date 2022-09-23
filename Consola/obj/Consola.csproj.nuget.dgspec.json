@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\Consola.csproj": {}
+    "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\Consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\Consola.csproj": {
+    "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\Consola.csproj",
+        "projectUniqueName": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\Consola.csproj",
         "projectName": "Consola",
-        "projectPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\Consola.csproj",
+        "projectPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\Consola.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\Consola\\obj\\",
+        "outputPath": "C:\\Users\\John\\Documents\\Ucaldas\\Ciclo3\\eventos\\Aplicacion\\consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -127,7 +127,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -210,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
