@@ -15,6 +15,7 @@ namespace Dominio
         [Required(ErrorMessage="Nombre es obligatorio")]
         [MaxLength(30,ErrorMessage="{0} debe tener max {1} caracteres")]
         [MinLength(4, ErrorMessage= "{0} debe tenet min {1} caracteres")]
+        [Display(Name="Nombre Torneo")]
         public string Nombre {get;set;}
 
         [Required(ErrorMessage="Este campo es obligatorio")]
@@ -59,6 +60,9 @@ namespace Dominio
 
         //propiedad navigacional para la relacion con UnidadDeportiva
         public List<UnidadDeportiva> UnidadDeportivas { get; set; }
+
+        //Propiedad navigacional Arbitros
+        public List<Arbitro> Arbitros {get;set;}
     
     }
 }

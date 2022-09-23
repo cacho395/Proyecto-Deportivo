@@ -11,6 +11,7 @@ namespace Dominio
         [Required(ErrorMessage="Nombre es obligatorio")]
         [MaxLength(20,ErrorMessage="{0} debe tener max {1} caracteres")]
         [MinLength(3, ErrorMessage= "{0} debe tenet min {1} caracteres")]
+        [Display(Name="Nombre Equipo")]
         public string Nombre{get;set;}
 
         [Required(ErrorMessage="Modalidades es obligatorio")]

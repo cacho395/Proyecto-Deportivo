@@ -31,7 +31,7 @@ namespace Dominio
         public int ColegioId { get; set; }
 
         // relacion con Torneo
-
-        //public int TorneoId {get;set;}
+        [Required(ErrorMessage="Este campo es obligatorio")]
+        public int TorneoId {get;set;}
     }
 }
