@@ -4,27 +4,27 @@ using Dominio;
 
 namespace Persistencia
 {
-    public class RArbitro:IRArbitro //: operador de herencia entre clases
+    public class RDeportista:IRDeportista //: operador de herencia entre clases
     {
         //atributos
         private readonly AppContext _appContext;
 
         //Metodos
         //Constructor por defecto
-        public RArbitro(AppContext appContext)
+        public RDeportista(AppContext appContext)
         {
             this._appContext=appContext;
         }
 
-        public bool CrearArbitro(Arbitro arb)
+        public bool CrearDeportista(Deportista dep)
         {
             bool creado=false;
-            bool ex= exist(arb);
+            bool ex= exist(dep);
             if(!ex)
             {
                 try
                 {
-                    this._appContext.Arbitros.Add(arb);
+                    this._appContext.Deportistas.Add(dep);
                     this._appContext.SaveChanges();
                     creado=true;
                 }
@@ -32,40 +32,37 @@ namespace Persistencia
                 {
                     creado=false;
                 }
+
             }
+            
             return creado;
         }
-        public Arbitro BuscarArbitro(int id)
+        public Deportista BuscarDeportista(int id)
         {
-            Arbitro arbitro=  _appContext.Arbitros.Find(id);
-
-            return arbitro;
+            return _appContext.Deportistas.Find(id);
         }
 
-        public Arbitro BuscarArbitroD(string doc)
-        {
-            Arbitro arbitro=  _appContext.Arbitros.FirstOrDefault(a=> a.Documento== doc);
-
-            return arbitro;
-        }
-        public bool ActualizarArbitro(Arbitro arb)
+        public bool ActualizarDeportista(Deportista depo)
         {
             bool actualizado=false;
-            var ar=_appContext.Arbitros.Find(arb.Id);
-            if(ar != null)
+            var dep=_appContext.Deportistas.Find(depo.Id);
+            if(dep != null)
             {
-                //bool ex= exist(arb);
+                //bool ex= exist(tor);
                 //if(!ex)
                 {
                     try
                     {
-                        ar.Documento=arb.Documento;
-                        ar.Nombres=arb.Nombres;
-                        ar.Apellidos=arb.Apellidos;
-                        ar.Modalidad= arb.Modalidad;
-                        ar.RH= arb.RH;
-                        ar.Celular= arb.Celular;
-                        ar.ColegioId=arb.ColegioId;
+                        dep.Documento=depo.Documento;
+                        dep.Nombres=depo.Nombres;
+                        dep.Apellidos= depo.Apellidos;
+                        dep.Genero= depo.Genero;
+                        dep.Modalidad= depo.Modalidad;
+                        dep.FechaNacimiento= depo.FechaNacimiento;
+                        dep.Rh= depo.Rh;
+                        dep.EPS=depo.EPS;
+                        dep.Celular= depo.Celular;
+                        dep.EquipoId=depo.EquipoId;
                         _appContext.SaveChanges();
                         actualizado= true;
                     }
@@ -80,15 +77,15 @@ namespace Persistencia
 
             return actualizado;
         }
-        public bool EliminarArbitro(int id)
+        public bool EliminarDeportista(int id)
         {
             bool eliminado= false;
-            var arb= this._appContext.Arbitros.Find(id);
-            if(arb !=null)
+            var dep= this._appContext.Deportistas.Find(id);
+            if(dep !=null)
             {
                 try
                 {
-                    this._appContext.Arbitros.Remove(arb);
+                    this._appContext.Deportistas.Remove(dep);
                     this._appContext.SaveChanges();
                     eliminado=true;
                 }
@@ -101,24 +98,26 @@ namespace Persistencia
 
             return eliminado;
         }
-        /*public List<Municipio> ListarMunicipios1()
+        public List<Deportista> ListarDeportistas1()
         {
-            return this._appContext.Municipios.ToList();
-        }*/
-        public IEnumerable<Arbitro> ListarArbitros()
+            return this._appContext.Deportistas.ToList();
+        }
+        public IEnumerable<Deportista> ListarDeportistas()
         {
-            return this._appContext.Arbitros;
+            return this._appContext.Deportistas;
         }
 
-        private bool exist(Arbitro arb)
+        private bool exist(Deportista deportista)
         {
             bool ex= false;
-            Arbitro ar= _appContext.Arbitros.FirstOrDefault(a=> a.Documento == arb.Documento);
-            if(ar !=null)
+            Deportista dep= _appContext.Deportistas.FirstOrDefault(d=>d.Documento == deportista.Documento);
+            if(dep !=null)
             {
                 ex=true;
             }
             return ex;
         }
+
+       
     }
 }

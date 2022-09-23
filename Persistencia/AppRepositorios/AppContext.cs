@@ -17,6 +17,7 @@ namespace Persistencia
         public DbSet<Escenario> Escenarios {get;set;}
         public DbSet<Deportista> Deportistas {get;set;}
         public DbSet<TorneoEquipo> TorneoEquipos {get;set;}
+        public DbSet<Login> Logins {get;set;}
 
         // crear la conexion de la DB
 
@@ -39,6 +40,8 @@ namespace Persistencia
             modelBuilder.Entity<Equipo>().HasIndex(eq => eq.Nombre).IsUnique();
             modelBuilder.Entity<Patrocinador>().HasIndex(p => p.Documento).IsUnique();
             modelBuilder.Entity<Arbitro>().HasIndex(a => a.Documento).IsUnique();
+            modelBuilder.Entity<Deportista>().HasIndex(d => d.Documento).IsUnique();
+            modelBuilder.Entity<Login>().HasIndex(l => l.Usuario).IsUnique();
         }
     }
 }

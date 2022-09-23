@@ -93,5 +93,16 @@ namespace Persistencia
         {
             return this._appContext.Entrenadores;
         }
+
+        private bool exist(Entrenador ent)
+        {
+            bool ex= false;
+            Entrenador en= _appContext.Entrenadores.FirstOrDefault(e=> e.Nombres == ent.Nombres);
+            if(en !=null)
+            {
+                ex=true;
+            }
+            return ex;
+        }
     }
 }
